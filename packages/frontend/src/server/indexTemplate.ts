@@ -6,7 +6,7 @@ export const reactCdnPath =
 
 export const reactDomCdnPath =
   process.env.NODE_ENV === PRODUCTION_MODE_STRING
-    ? "https://unpkg.com/react-dom@16/umd/react-dom.production.js"
+    ? "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
     : "https://unpkg.com/react-dom@16/umd/react-dom.development.js";
 
 export const indexFile = `
@@ -22,7 +22,7 @@ export const indexFile = `
   <div id="root"></div>
   <script src="${reactCdnPath}" type="text/javascript"></script>
   <script src="${reactDomCdnPath}" type="text/javascript"></script>
-  <script src="./assets/main.js" type="text/javascript">
+  <script src="/assets/main.js" type="text/javascript">
 </script>
 </body>
 </html>

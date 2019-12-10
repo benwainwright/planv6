@@ -24,7 +24,7 @@
   "scripts": {
     "build:client": "webpack --env=prod",
     "build:server": "tsc",
-    "build:prod": "yarn build:server && yarn build:client:prod"
+    "build:prod": "yarn build:server && yarn build:client"
   },
   "devDependencies": {
     "@types/react": "^16.9.15",

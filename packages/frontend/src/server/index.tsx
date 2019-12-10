@@ -10,7 +10,7 @@ import webpack from "webpack";
 
 import { App } from "../client/components/App";
 import { indexFile } from "./indexTemplate";
-import { PRODUCTION_MODE_STRING } from "./constants";
+import { PRODUCTION_MODE_STRING, DEFAULT_SERVER_PORT } from "./constants";
 
 const initialiseServer = async () => {
   const app = new Koa();
@@ -50,11 +50,12 @@ const initialiseServer = async () => {
     const middleware = await koaWebpack({ config });
     app.use(middleware);
   } else {
-    app.use(mount("/static", KoaStatic("./dist/assets/")));
+    app.use(mount("/assets", KoaStatic("./dist/assets/")));
   }
 
   app.use(router.routes());
-  app.listen(80);
+  const port = process.env.SERVER_PORT || DEFAULT_SERVER_PORT;
+  app.listen(port, () => console.log(`Listening on port ${port}`));
 };
 
 initialiseServer();
