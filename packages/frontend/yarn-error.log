@@ -1,0 +1,75 @@
+Arguments: 
+  /usr/local/Cellar/node/13.2.0/bin/node /usr/local/Cellar/yarn/1.19.2/libexec/bin/yarn.js build:server
+
+PATH: 
+  /usr/local/sbin:/Users/wainwb01/go/bin:/Users/wainwb01/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:/Applications/Emacs.app/Contents/MacOS/bin:/usr/local/go/bin:/usr/local/go/bin:/Users/wainwb01/.fzf/bin
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  13.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/wainwb01/repos/planv6/packages/frontend/package.json: Unexpected token } in JSON at position 681
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "@planv6/frontend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@types/koa": "^2.11.0",
+      "@types/koa-router": "^7.0.42",
+      "@types/koa-static": "^4.0.1",
+      "@types/koa-webpack": "^5.0.1",
+      "@yarnpkg/pnpify": "^2.0.0-rc.12",
+      "eslint": "^6.7.2",
+      "koa": "^2.11.0",
+      "koa-router": "^7.4.0",
+      "koa-static": "^5.0.0",
+      "koa-webpack": "^5.2.4",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0"
+    },
+    "scripts": {
+      "build:client:prod": "webpack --env=prod",
+      "build:client:dev": "webpack --env=dev",
+      "build:server": "tsc",
+      "build:prod": "yarn build:server && yarn build:client:prod",
+    },
+    "devDependencies": {
+      "@types/react": "^16.9.15",
+      "@types/react-dom": "^16.9.4",
+      "awesome-typescript-loader": "^5.2.1",
+      "fork-ts-checker-webpack-plugin": "^3.1.1",
+      "html-webpack-plugin": "^3.2.0",
+      "koa-webpack": "^5.2.4",
+      "koa-webpack-dev-middleware": "^2.0.2",
+      "koa-webpack-hot-middleware": "^1.0.3",
+      "pnp-webpack-plugin": "^1.5.0",
+      "source-map-loader": "^0.2.4",
+      "ts-loader": "^6.2.1",
+      "ts-pnp": "^1.1.5",
+      "typescript": "^3.7.3",
+      "webpack": "^4.41.2",
+      "webpack-cli": "^3.3.10",
+      "webpack-hot-middleware": "^2.25.0",
+      "webpack-merge": "^4.2.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

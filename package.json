@@ -1,0 +1,11 @@
+{
+  "name": "planv6",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ben Wainwright <ben.wainwright@bbc.co.uk>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/frontend"
+  ]
+}
