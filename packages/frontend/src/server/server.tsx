@@ -10,9 +10,9 @@ import webpack from "webpack";
 
 import { App } from "../client/components/App";
 import { indexFile } from "./indexTemplate";
-import { PRODUCTION_MODE_STRING, DEFAULT_SERVER_PORT } from "./constants";
+import { PRODUCTION_MODE_STRING } from "./constants";
 
-const initialiseServer = async () => {
+export const configureServer = async (enableHmr: boolean): Promise<Koa> => {
   const app = new Koa();
   const router = new Router();
 
@@ -45,7 +45,7 @@ const initialiseServer = async () => {
       context.body = renderedPage;
     })
   );
-  if (process.env.NODE_ENV !== PRODUCTION_MODE_STRING) {
+  if (enableHmr) {
     const config: webpack.Configuration = require("../../webpack/webpack.config.dev");
     const middleware = await koaWebpack({ config });
     app.use(middleware);
@@ -54,8 +54,5 @@ const initialiseServer = async () => {
   }
 
   app.use(router.routes());
-  const port = process.env.SERVER_PORT || DEFAULT_SERVER_PORT;
-  app.listen(port, () => console.log(`Listening on port ${port}`));
+  return app;
 };
-
-initialiseServer();
