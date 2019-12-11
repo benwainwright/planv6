@@ -5,8 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "@yarnpkg/pnpify": "^2.0.0-rc.12",
-    "eslint": "^6.7.2",
-    "html-dom-parser": "^0.2.3",
     "koa": "^2.11.0",
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
@@ -15,7 +13,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "xmldom": "^0.1.27"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
@@ -30,7 +27,8 @@
     "@types/react": "^16.9.15",
     "@types/react-dom": "^16.9.4",
     "awesome-typescript-loader": "^5.2.1",
-    "dom-parser": "^0.1.6",
+    "eslint": "^6.7.2",
+    "xmldom": "^0.1.27"
     "fork-ts-checker-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
