@@ -28,7 +28,7 @@
     "@types/react-dom": "^16.9.4",
     "awesome-typescript-loader": "^5.2.1",
     "eslint": "^6.7.2",
-    "xmldom": "^0.1.27",
+    "xmldom": "^0.6.0",
     "fork-ts-checker-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
